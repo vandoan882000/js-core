@@ -1,0 +1,72 @@
+label.veda-checkbox,
+label.veda-radio {
+  --size: 18px;
+  --color: var(--color-primary, #000);
+  user-select: none;
+}
+
+.veda-radio__inner,
+.veda-checkbox__inner {
+  display: inline-block;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 4px;
+  border: 1px solid var(--color-gray3, #eee);
+  input {
+    display: none;
+    &:checked {
+      ~ .veda-checkbox__track,
+      ~ .veda-radio__track {
+        opacity: 1;
+        i {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.veda-radio__inner {
+  border-radius: 50%;
+}
+
+
+.veda-checkbox__track,
+.veda-radio__track {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--color);
+  opacity: 0;
+  transition: 0.2s;
+  i {
+    font-size: calc(var(--size) - 6px);
+    overflow: hidden;
+    transform: scale(0);
+    transition: 0.2s;
+    color: var(--color-light, #fff);
+  }
+}
+
+.veda-radio__track {
+  border-radius: 50%;
+}
+
+div.veda-checkbox,
+div.veda-radio {
+  * {
+    display: none !important;
+  }
+  &:after {
+    content: 'You need to use `<label class="veda-checkbox">...</label>` for radio and checkbox';
+  }
+}

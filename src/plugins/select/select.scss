@@ -1,0 +1,32 @@
+.veda-select {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.veda-select__view {
+  border: 1px solid var(--color-gray3, #eee);
+  padding: 8px 15px;
+}
+
+.veda-select__options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  display: none;
+  border: 1px solid var(--color-gray3, #eee);
+}
+
+.veda-select__option {
+  padding: 10px 15px;
+  background-color: var(--color-light, #fff);
+  + .veda-select__option {
+    border-top: 1px solid var(--color-gray3, #eee);
+  }
+}
+
+.veda-select--opened .veda-select__options {
+  display: block;
+}

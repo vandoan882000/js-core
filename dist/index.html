@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Preact boilerplate" />
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.css" />
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <title>Core</title>
+    <style>
+      *, *:before, *:after {
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+      }
+      .veda-slider {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <label class="veda-checkbox">
+        <div class="veda-checkbox__inner">
+          <input type="checkbox">
+          <div class="veda-checkbox__track">
+            <i class="far fa-check"></i>
+          </div>
+        </div>
+      </label>
+      <label class="veda-radio">
+        <div class="veda-radio__inner">
+          <input type="radio">
+          <div class="veda-radio__track">
+            <i class="far fa-check"></i>
+          </div>
+        </div>
+      </label>
+      <div class="veda-counter">
+        <div class="veda-counter__decrement">-</div>
+        <input class="veda-counter__input" data-button="disabled" type="number" />
+        <div class="veda-counter__increment">+</div>
+      </div>
+      <div class="veda-counter" data-options="{ value: 10, step: 2 }">
+        <div class="veda-counter__decrement">-</div>
+        <!-- <input class="veda-counter__input" type="number" /> -->
+        <div class="veda-counter__input"></div>
+        <div class="veda-counter__increment">+</div>
+      </div>
+      <button class="test">Click</button>
+      <div class="veda-slider" data-options="{ range: true, step: 30 }">
+        <div class="veda-slider__thumb" data-index="0"></div>
+        <div class="veda-slider__thumb" data-index="1"></div>
+        <div class="veda-slider__track"></div>
+        <div class="veda-slider__tracked"></div>
+      </div>
+      <!-- <div class="veda-slider" data-options="{ min: 100, value: 120 }">
+        <div class="veda-slider__thumb" data-index="0"></div>
+        <div class="veda-slider__thumb" data-index="1"></div>
+        <div class="veda-slider__track"></div>
+        <div class="veda-slider__tracked"></div>
+      </div> -->
+
+      <div class="veda-select">
+        <div class="veda-select__view">
+          <div class="veda-select__label"></div>
+        </div>
+        <div class="veda-select__options">
+          <div class="veda-select__option" value="html">Html</div>
+          <div class="veda-select__option" value="photoshop">Photoshop</div>
+          <div class="veda-select__option" value="css">CSS</div>
+          <div class="veda-select__option" value="js">Js</div>
+        </div>
+      </div>
+      <div data-tooltip-text="Tooltip top" data-tooltip-position="top">Tooltip top</div>
+      <div data-tooltip-text="Tooltip right" data-tooltip-active-text="Tooltip right active" data-tooltip-active="true" data-tooltip-position="right">Tooltip right</div>
+      <div data-tooltip-text="Tooltip bottom" data-tooltip-position="bottom">Tooltip bottom</div>
+      <div data-tooltip-text="Tooltip left" data-tooltip-position="left">Tooltip left</div>
+
+      <div data-tooltip-text="Tooltip left">Tooltip position warning</div>
+      <div data-tooltip-text="Tooltip left" data-tooltip-active="true">Tooltip active warning</div>
+      <div style="width: 50%;">
+        <div
+          class="veda-swiper"
+          data-options="{
+            speed: 400,
+            spaceBetween: 30
+          }"
+        >
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/beautiful-woman-winter-hat-looking-her-side_114579-81546.jpg?t=st=1650389795~exp=1650390395~hmac=7390fea5086c29feb86c1afc4c7165fd49d157e7970e4942da7b012844e78541&w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-young-woman-posing-gray-wall_114579-81607.jpg?w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-young-man-model-wearing-casual-summer-pink-clothes-fashion-stylish-man-posing-round-sunglasses_158538-5346.jpg?t=st=1650389921~exp=1650390521~hmac=12120398dc34f3955391d47ed2e0909b52d25c932d9423843666c0e3d63928fb&w=1800" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4909.jpg?w=1800" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div> -->
+        </div>
+        <div
+          class="veda-swiper-thumbnails"
+          data-options="{
+            speed: 400
+          }"
+        >
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/beautiful-woman-winter-hat-looking-her-side_114579-81546.jpg?t=st=1650389795~exp=1650390395~hmac=7390fea5086c29feb86c1afc4c7165fd49d157e7970e4942da7b012844e78541&w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-young-woman-posing-gray-wall_114579-81607.jpg?w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-young-man-model-wearing-casual-summer-pink-clothes-fashion-stylish-man-posing-round-sunglasses_158538-5346.jpg?t=st=1650389921~exp=1650390521~hmac=12120398dc34f3955391d47ed2e0909b52d25c932d9423843666c0e3d63928fb&w=1800" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4909.jpg?w=1800" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="./main.js"></script>
+    <script>
+      const select = veda.plugins.select({
+        el: document.querySelector('.veda-select'),
+        value: 'js',
+        onChange(value) {
+          console.log(value);
+        }
+      });
+
+      veda.plugins.swiper(document.body);
+
+      let timeout = 0;
+
+      function handleChange(value) {
+        console.log(123123123213, this, value);
+      }
+
+      const slider = veda.plugins.slider({
+        el: document.querySelector('.veda-slider'),
+        // onChange: veda.utils.debounce(handleChange, 400),
+        onChanged(value) {
+          console.log("onChanged: ", value);
+        }
+      });
+
+      document.querySelector('button').addEventListener('click', () => {
+        slider.setValue([100, 180]);
+      });
+
+      veda.plugins.counter(document.body, {
+        onChange(value) {
+          console.log(value);
+        }
+      });
+    </script>
+  </body>
+</html>

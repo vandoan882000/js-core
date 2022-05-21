@@ -1,0 +1,186 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--color-light);
+  color: var(--color-gray7);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+html, body {
+  height: auto !important;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-gray9);
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 1.4;
+  font-weight: 600;
+  font-family: var(--font-secondary);
+}
+
+p {
+  margin: 0;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+  img:-moz-loading {
+    visibility: hidden;
+  }
+}
+
+.veda-section {
+  position: relative;
+  z-index: 1;
+  padding: 60px 0;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.veda-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.veda-image-cover {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  &:before {
+    content: '';
+    display: block;
+    padding-top: calc((1 / (var(--aspect-ratio, 1.33))) * 100%);
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.veda-embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: calc((1 / (var(--aspect-ratio, 1.777))) * 100%);
+  .veda-embed-responsive__item,
+  iframe,
+  embed,
+  object {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.animate__animated-infinite {
+  animation-iteration-count: infinite;
+}
+
+input[data-button=disabled]::-webkit-outer-spin-button,
+input[data-button=disabled]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[data-button=disabled][type=number] {
+  -moz-appearance: textfield;
+}
+
+.veda-nav-close-button,
+.veda-hamburger-menu-icon {
+  font-size: 24px;
+  color: var(--color-gray9);
+}
+
+.veda-scrollbar {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@-moz-document url-prefix() {
+  .veda-scrollbar {
+    scrollbar-color: #999 #999;
+    scrollbar-width: thin;
+  }
+}
+
+/* width */
+.veda-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+.veda-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* Handle */
+.veda-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+/* Handle on hover */
+.veda-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #999;
+}

@@ -1,0 +1,19 @@
+.veda-compare__table-header {
+  z-index: 99;
+}
+.veda-compare__table-header-title {
+  border: 1px solid #e6e6e6;
+  font-weight: 500;
+  vertical-align: top;
+  padding: 35px 10px 35px 10px;
+  border-top: 0px;
+  font-size: 13px;
+  min-width: 84px;
+  @media screen and (min-width: 480px) {
+    min-width: 100px;
+    font-size: 18px;
+  }
+}
+.veda-compare__table-header-title:first-child {
+  border-top: 1px solid #e6e6e6;
+}

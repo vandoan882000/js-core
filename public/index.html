@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Preact boilerplate" />
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <title>Core</title>
+    <style>
+      *, *:before, *:after {
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+      }
+      .veda-slider {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <label class="veda-checkbox">
+        <div class="veda-checkbox__inner">
+          <input type="checkbox">
+          <div class="veda-checkbox__track">
+            <i class="far fa-check"></i>
+          </div>
+        </div>
+      </label>
+      <label class="veda-radio">
+        <div class="veda-radio__inner">
+          <input type="radio">
+          <div class="veda-radio__track">
+            <i class="far fa-check"></i>
+          </div>
+        </div>
+      </label>
+      <div class="veda-counter">
+        <div class="veda-counter__decrement">-</div>
+        <input class="veda-counter__input" data-button="disabled" type="number" />
+        <div class="veda-counter__increment">+</div>
+      </div>
+      <div class="veda-counter" data-options="{ value: 10, step: 2 }">
+        <div class="veda-counter__decrement">-</div>
+        <!-- <input class="veda-counter__input" type="number" /> -->
+        <div class="veda-counter__input"></div>
+        <div class="veda-counter__increment">+</div>
+      </div>
+      <button class="test">Click</button>
+      <div class="veda-slider" data-options="{ range: true, step: 30 }">
+        <div class="veda-slider__thumb" data-index="0"></div>
+        <div class="veda-slider__thumb" data-index="1"></div>
+        <div class="veda-slider__track"></div>
+        <div class="veda-slider__tracked"></div>
+      </div>
+      <!-- <div class="veda-slider" data-options="{ min: 100, value: 120 }">
+        <div class="veda-slider__thumb" data-index="0"></div>
+        <div class="veda-slider__thumb" data-index="1"></div>
+        <div class="veda-slider__track"></div>
+        <div class="veda-slider__tracked"></div>
+      </div> -->
+
+      <div class="veda-select">
+        <div class="veda-select__view">
+          <div class="veda-select__label"></div>
+        </div>
+        <div class="veda-select__options">
+          <div class="veda-select__option" value="html">Html</div>
+          <div class="veda-select__option" value="photoshop">Photoshop</div>
+          <div class="veda-select__option" value="css">CSS</div>
+          <div class="veda-select__option" value="js">Js</div>
+        </div>
+      </div>
+      <div data-tooltip-text="Tooltip top" data-tooltip-position="top">Tooltip top</div>
+      <div data-tooltip-text="Tooltip right" data-tooltip-active-text="Tooltip right active" data-tooltip-active="true" data-tooltip-position="right">Tooltip right</div>
+      <div data-tooltip-text="Tooltip bottom" data-tooltip-position="bottom">Tooltip bottom</div>
+      <div data-tooltip-text="Tooltip left" data-tooltip-position="left">Tooltip left</div>
+
+      <div data-tooltip-text="Tooltip left">Tooltip position warning</div>
+      <div data-tooltip-text="Tooltip left" data-tooltip-active="true">Tooltip active warning</div>
+      <div style="width: 50%;">
+        <div
+          class="veda-swiper"
+          data-options="{
+            speed: 400,
+            spaceBetween: 30
+          }"
+        >
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/beautiful-woman-winter-hat-looking-her-side_114579-81546.jpg?t=st=1650389795~exp=1650390395~hmac=7390fea5086c29feb86c1afc4c7165fd49d157e7970e4942da7b012844e78541&w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-young-woman-posing-gray-wall_114579-81607.jpg?w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-young-man-model-wearing-casual-summer-pink-clothes-fashion-stylish-man-posing-round-sunglasses_158538-5346.jpg?t=st=1650389921~exp=1650390521~hmac=12120398dc34f3955391d47ed2e0909b52d25c932d9423843666c0e3d63928fb&w=1800" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4909.jpg?w=1800" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div> -->
+        </div>
+        <div
+          class="veda-swiper-thumbnails"
+          data-options="{
+            speed: 400
+          }"
+        >
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/beautiful-woman-winter-hat-looking-her-side_114579-81546.jpg?t=st=1650389795~exp=1650390395~hmac=7390fea5086c29feb86c1afc4c7165fd49d157e7970e4942da7b012844e78541&w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-young-woman-posing-gray-wall_114579-81607.jpg?w=2000" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-young-man-model-wearing-casual-summer-pink-clothes-fashion-stylish-man-posing-round-sunglasses_158538-5346.jpg?t=st=1650389921~exp=1650390521~hmac=12120398dc34f3955391d47ed2e0909b52d25c932d9423843666c0e3d63928fb&w=1800" alt="">
+              </div>
+              <div component="swipers" class="swiper-slide">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4909.jpg?w=1800" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div style="margin-top:30px;">
+        <button class="veda-compare__popup" data-options="{
+          content: ['Product', 'Rating', 'Description', 'Abd'],
+          header: {
+            title: 'Compare',
+            description: 'Compare description1',
+          },
+        }">
+          <i class="fal fa-repeat"></i>
+          <div class="veda-compare__badge"></div>
+        </button>
+        <button class="veda-compare__btn-toggle" style="margin-left:10px">Add</button>
+
+      </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+      const select = veda.plugins.select({
+        el: document.querySelector('.veda-select'),
+        value: 'js',
+        onChange(value) {
+          console.log(value);
+        }
+      });
+
+      veda.plugins.swiper(document.body);
+
+      let timeout = 0;
+
+      function handleChange(value) {
+        console.log(123123123213, this, value);
+      }
+
+      const slider = veda.plugins.slider({
+        el: document.querySelector('.veda-slider'),
+        // onChange: veda.utils.debounce(handleChange, 400),
+        onChanged(value) {
+          console.log("onChanged: ", value);
+        }
+      });
+
+      document.querySelector('button').addEventListener('click', () => {
+        slider.setValue([100, 180]);
+      });
+
+      veda.plugins.counter(document.body, {
+        onChange(value) {
+          console.log(value);
+        }
+      });
+
+      // Compare popup
+      const dataCompare = {
+        id: "7329396097256",
+        gift_card: true,
+        title: "Levi's Commuter Skinny Jeans",
+        vendor: "Levi's",
+        handle: "levis-commuter-skinny-jeans",
+        available: true,
+        content:
+          '<p><em>This is a demonstration store. You can purchase products like this from <a href="https://www.purefixcycles.com" target="_blank">Pure Fix Cycles</a></em></p><p>Jeans are the go-to pants for going places, and these jeans know you\'re going by bike. Made with performance materials for comfort, reflective side seams for visibility, and a water-resistant finish to keep the road off your clothes, the Levi\'s Commuter jeans are made for riding and they feel awesome enough that you\'ll wear them even when you\'re staying home.</p>\n<div class="textile">\n<h3>Specs</h3>\n<ul>\n<li>High rise</li>\n<li>Skinny leg</li>\n<li>Reflective tape on seams</li>\n<li>EcoRepel finishing (water resistant technology)</li>\n<li>Deeper back pockets</li>\n<li>94% Cotton, 4% Polyester, 2% Elastane - Imported</li>\n</ul>\n</div>',
+        description:
+          '<p><em>This is a demonstration store. You can purchase products like this from <a href="https://www.purefixcycles.com" target="_blank">Pure Fix Cycles</a></em></p><p>Jeans are the go-to pants for going places, and these jeans know you\'re going by bike. Made with performance materials for comfort, reflective side seams for visibility, and a water-resistant finish to keep the road off your clothes, the Levi\'s Commuter jeans are made for riding and they feel awesome enough that you\'ll wear them even when you\'re staying home.</p>\n<div class="textile">\n<h3>Specs</h3>\n<ul>\n<li>High rise</li>\n<li>Skinny leg</li>\n<li>Reflective tape on seams</li>\n<li>EcoRepel finishing (water resistant technology)</li>\n<li>Deeper back pockets</li>\n<li>94% Cotton, 4% Polyester, 2% Elastane - Imported</li>\n</ul>\n</div>',
+        featured_image: {
+          created_at: "Mon Mar 21 03:57:05 UTC 2022",
+          updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+          aspect_ratio: 1.5,
+          id: "32918370418909",
+          media_type: "image",
+          preview_image:
+            "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+          src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+          width: 1050,
+          height: 700,
+          url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+          alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+          attached_to_variant: false,
+        },
+        images: [
+          {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370418909",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+          },
+          {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370451677",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-2_WEB.jpg?v=1634091629",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-2_WEB.jpg?v=1634091629",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-2_WEB.jpg?v=1634091629",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+          },
+          {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370484445",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+          },
+          {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370517213",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+          },
+          {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370549981",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-5_WEB.jpg?v=1634091630",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-5_WEB.jpg?v=1634091630",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-5_WEB.jpg?v=1634091630",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+          },
+        ],
+        media: [
+          {
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            id: "25311858852061",
+            position: "IMAGE",
+            preview_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "25311858852061",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091620",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091620",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091620",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+          },
+          {
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            id: "25311858884829",
+            position: "IMAGE",
+            preview_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "25311858884829",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-2_WEB.jpg?v=1634091620",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-2_WEB.jpg?v=1634091620",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-2_WEB.jpg?v=1634091620",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+          },
+          {
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            id: "25311858917597",
+            position: "IMAGE",
+            preview_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "25311858917597",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091620",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091620",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091620",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+          },
+          {
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            id: "25311858950365",
+            position: "IMAGE",
+            preview_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "25311858950365",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091620",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091620",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091620",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+          },
+          {
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            id: "25311858983133",
+            position: "IMAGE",
+            preview_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "25311858983133",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-5_WEB.jpg?v=1634091620",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-5_WEB.jpg?v=1634091620",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-5_WEB.jpg?v=1634091620",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+          },
+        ],
+        options: ["Size", "Color"],
+        price_max: 88.0,
+        price_min: 88.0,
+        price_varies: false,
+        published_at: "2021-10-13T02:20:13Z",
+        created_at: "2021-10-13T02:20:20Z",
+        type: "Apparel",
+        tags: ["Accessories", "Apparel", "Pants"],
+        variants: [
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088047837",
+            inventory_management: "SHOPIFY",
+            options: ["24 x 32", "Black"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Black 24x32",
+            title: "24 x 32 / Black",
+            weight: 1.0009,
+            inventory_quantity: 0,
+            available: false,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088047837"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088080605",
+            inventory_management: "SHOPIFY",
+            options: ["24 x 32", "Cyan"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Blue 24x32",
+            title: "24 x 32 / Cyan",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088080605"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088113373",
+            inventory_management: "SHOPIFY",
+            options: ["24 x 32", "Grey"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Grey 24x32",
+            title: "24 x 32 / Monument",
+            weight: 1.0009,
+            inventory_quantity: 0,
+            available: false,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088113373"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088146141",
+            inventory_management: "SHOPIFY",
+            options: ["25 x 32", "Black"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Black 25x32",
+            title: "25 x 32 / Black",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088146141"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088178909",
+            inventory_management: "SHOPIFY",
+            options: ["25 x 32", "Cyan"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Blue 25x32",
+            title: "25 x 32 / Cyan",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088178909"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088211677",
+            inventory_management: "SHOPIFY",
+            options: ["25 x 32", "Grey"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Grey 25x32",
+            title: "25 x 32 / Monument",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088211677"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088244445",
+            inventory_management: "SHOPIFY",
+            options: ["26 x 32", "Black"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Black 26x32",
+            title: "26 x 32 / Black",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088244445"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088277213",
+            inventory_management: "SHOPIFY",
+            options: ["26 x 32", "Cyan"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Blue 26x32",
+            title: "26 x 32 / Cyan",
+            weight: 1.0009,
+            inventory_quantity: 0,
+            available: false,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088277213"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088309981",
+            inventory_management: "SHOPIFY",
+            options: ["26 x 32", "Monument"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Grey 26x32",
+            title: "26 x 32 / Monument",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088309981"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088342749",
+            inventory_management: "SHOPIFY",
+            options: ["27 x 32", "Black"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Black 27x32",
+            title: "27 x 32 / Black",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088342749"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088375517",
+            inventory_management: "SHOPIFY",
+            options: ["27 x 32", "Cyan"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Blue 27x32",
+            title: "27 x 32 / Cyan",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088375517"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088408285",
+            inventory_management: "SHOPIFY",
+            options: ["27 x 32", "Monument"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Grey 27x32",
+            title: "27 x 32 / Monument",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088408285"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088441053",
+            inventory_management: "SHOPIFY",
+            options: ["28 x 32", "Black"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Black 28x32",
+            title: "28 x 32 / Black",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370418909",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088441053"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088473821",
+            inventory_management: "SHOPIFY",
+            options: ["28 x 32", "Cyan"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Blue 28x32",
+            title: "28 x 32 / Cyan",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370484445",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088473821"],
+            },
+          },
+          {
+            image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+            },
+            barcode: "",
+            id: "41664088506589",
+            inventory_management: "SHOPIFY",
+            options: ["28 x 32", "Monument"],
+            price: 88,
+            requires_shipping: true,
+            sku: "Levis - Lady Pant - Grey 28x32",
+            title: "28 x 32 / Monument",
+            weight: 1.0009,
+            inventory_quantity: 1,
+            available: true,
+            featured_image: {
+              created_at: "Mon Mar 21 03:57:05 UTC 2022",
+              updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+              aspect_ratio: 1.5,
+              id: "32918370517213",
+              media_type: "image",
+              preview_image:
+                "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              width: 1050,
+              height: 700,
+              url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-grey-4_WEB.jpg?v=1634091630",
+              alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+              attached_to_variant: false,
+              variant_ids: ["41664088506589"],
+            },
+          },
+        ],
+        featured_media: {
+          alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+          id: "25311858852061",
+          position: 1,
+          preview_image: {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "25311858852061",
+            media_type: "image",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091620",
+            width: 1050,
+            height: 700,
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+          },
+        },
+        price: 88.0,
+        options_with_values: [
+          {
+            name: "Size",
+            position: 1,
+            values: [
+              "S",
+              "M"
+            ],
+            selected_value: "24 x 32",
+          },
+          {
+            name: "Color",
+            position: 2,
+            values: ["Black", "Cyan", "Monument", "Grey"],
+            selected_value: "Black",
+          },
+        ],
+        first_available_variant: {
+          image: {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370418909",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+            variant_ids: ["41664088047837"],
+          },
+          barcode: "",
+          id: "41664088047837",
+          inventory_management: "SHOPIFY",
+          options: ["24 x 32", "Black"],
+          price: 88,
+          requires_shipping: true,
+          sku: "Levis - Lady Pant - Black 24x32",
+          title: "24 x 32 / Black",
+          weight: 1.0009,
+          inventory_quantity: 0,
+          available: false,
+          featured_image: {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370418909",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-black-1_WEB.jpg?v=1634091629",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+            variant_ids: ["41664088047837"],
+          },
+        },
+        selected_or_first_available_variant: {
+          image: {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370484445",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+            variant_ids: ["41664088080605"],
+          },
+          barcode: "",
+          id: "41664088080605",
+          inventory_management: "SHOPIFY",
+          options: ["24 x 32", "Cyan"],
+          price: 88,
+          requires_shipping: true,
+          sku: "Levis - Lady Pant - Blue 24x32",
+          title: "24 x 32 / Cyan",
+          weight: 1.0009,
+          inventory_quantity: 1,
+          available: true,
+          featured_image: {
+            created_at: "Mon Mar 21 03:57:05 UTC 2022",
+            updated_at: "Mon Mar 21 03:57:05 UTC 2022",
+            aspect_ratio: 1.5,
+            id: "32918370484445",
+            media_type: "image",
+            preview_image:
+              "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            src: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            width: 1050,
+            height: 700,
+            url: "https://cdn.shopify.com/s/files/1/0550/4260/5277/products/Womens-pants-blue-2_WEB.jpg?v=1634091630",
+            alt: "Levi's Commuter Skinny Jeans (7329396097245)",
+            attached_to_variant: false,
+            variant_ids: ["41664088080605"],
+          },
+        },
+      };
+      //const comparePopup = document.querySelector(".veda-compare__popup");
+      //const dataCompareOption = comparePopup.getAttribute("data-option").split(",");
+
+      //button add compare
+      const btnAddCompare = document.querySelector('.veda-compare__btn-toggle');
+      btnAddCompare.addEventListener('click', () => {
+        veda.plugins.productCompare.toggleProduct(dataCompare);
+      });
+      //button popup
+      const btnCompare = document.querySelector('.veda-compare__popup');
+      btnCompare.addEventListener('click', () => {
+        veda.plugins.productCompare.togglePopop();
+      });
+      // compare badge
+      const compareBadge = document.querySelector('.veda-compare__badge');
+      compareBadge.innerHTML = veda.plugins.productCompare.getData().length;
+      veda.plugins.productCompare.subscribe((state) => {
+        compareBadge.innerHTML = state.length;
+      });
+    </script>
+  </body>
+</html>

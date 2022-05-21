@@ -1,0 +1,39 @@
+{
+  "plugins": ["import", "react-hooks", "preact", "prettier"],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/promise-function-async": "off"
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "import/order": ["error", { "groups": ["builtin", "internal", "external", "index", "parent", "sibling"] }],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "prefer-const": "error",
+    "func-names": ["error", "never"],
+    "wrap-iife": ["error", "any"],
+    "no-extra-boolean-cast": "off",
+    "linebreak-style": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}

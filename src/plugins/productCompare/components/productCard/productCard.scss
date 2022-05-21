@@ -1,0 +1,89 @@
+.veda-compare__product-content-item {
+  border: 1px solid #e6e6e6;
+  min-width: 100px;
+  font-size: 15px;
+  font-weight: 400;
+  vertical-align: top;
+  padding: 35px 10px 35px 10px;
+  text-align: center;
+  color: #000;
+  border-left: 0px;
+  border-top: 0px;
+  min-width: none;
+  width: 158px;
+  @media screen and (min-width: 480px) {
+    min-width: 100px;
+    width: 270px;
+  }
+}
+.veda-compare__product-content-item:first-child {
+  border-top: 1px solid #e6e6e6;
+}
+.veda-compare__product-content {
+  display: flex;
+  flex-direction: column;
+}
+.veda-compare-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.veda-compare-product-card__img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.veda-compare-product-card__image {
+  overflow: hidden;
+  width: 100%;
+}
+.veda-image-cover {
+  display: block;
+  border: none;
+}
+.veda-image-cover img {
+  aspect-ratio: 4/3;
+}
+.veda-compare-product-card__status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  height: 127px;
+}
+.veda-compare-product-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.veda-compare-product-card__brand {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(68, 67, 67);
+  margin-top: 11px;
+}
+.veda-compare-product-card__name {
+  font-size: 16px;
+  margin-top: 15px;
+  color: #000;
+  text-decoration: none;
+}
+.veda-compare-product-card__price {
+  margin-top: 14px;
+  color: red;
+  text-decoration: none;
+}
+.veda-compare-product-card__price:hover {
+  color: red;
+}
+.veda-compare-product-card__cost {
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+}
+.fa-star {
+  color: #FEAA01;
+  font-size: 24px;
+}

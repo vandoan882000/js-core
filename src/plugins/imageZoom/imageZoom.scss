@@ -1,0 +1,25 @@
+.veda-image-zoom {
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+.veda-image-zoom__zoom-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: 0 0;
+  display: none;
+  pointer-events: none;
+}
+.veda-image-zoom--active .veda-image-zoom__zoom-item {
+  display: block;
+}
+.veda-image-zoom img {
+  width: 100%;
+}

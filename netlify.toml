@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"
+[build.environment]
+  NODE_VERSION = "v16.13.1"
+  YARN_VERSION = "1.22.10"
+  YARN_FLAGS = "--no-ignore-optional"
+
+

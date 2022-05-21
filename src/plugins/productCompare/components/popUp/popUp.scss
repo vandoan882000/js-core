@@ -1,0 +1,75 @@
+.veda-compare__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.veda-compare__wrapper {
+  position: relative;
+  height: 100%;
+  width: 91%;
+  @media screen and (min-width: 992px) {
+    width: 1196px;
+  }
+}
+.veda-compare__content {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  overflow: auto;
+  height: 100%;
+
+}
+.veda-compare__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(2 2 2 / 50%);
+}
+.veda-compare__table {
+  width: 100%;
+  display: flex;
+}
+
+.veda-compare__btn-close i {
+  font-size: 20px;
+  color: #000;
+  line-height: 30px;
+}
+.veda-compare__items-container {
+  overflow: auto;
+}
+.veda-compare__items {
+  display: flex;
+  width:max-content;
+  flex-wrap: wrap;
+}
+.veda-compare__popup {
+  position: relative;
+  cursor: pointer;
+}
+.veda-compare__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  width: 15px;
+  background-color: red;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+
+}

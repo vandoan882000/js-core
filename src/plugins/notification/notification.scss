@@ -1,0 +1,52 @@
+.veda-notification-root--top-left,
+.veda-notification-root--top-right,
+.veda-notification-root--bottom-left,
+.veda-notification-root--bottom-right {
+  position: fixed;
+  z-index: 9999;
+}
+
+.veda-notification-root--top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.veda-notification-root--top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.veda-notification-root--bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.veda-notification-root--bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.veda-notification {
+  position: relative;
+  background-color: var(--color-light, #fff);
+  box-shadow: 0 5px 10px rgba(var(--color-rgb-dark, 0, 0, 0), 0.08);
+  color: var(--color-gray8, #444);
+  border: 1px solid var(--color-gray-3, #eee);
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: max-content;
+}
+
+.veda-notification__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}

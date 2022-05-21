@@ -1,0 +1,22 @@
+.veda-compare__header-title {
+  font-size: 25px;
+  margin-top: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: #000;
+  @media screen and (min-width: 480px) {
+    font-size: 35px;
+  }
+}
+.veda-compare__header-text {
+  font-size: 15px;
+  line-height: 32px;
+  margin-top: 7px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 400;
+  color: #000;
+  @media screen and (min-width: 480px) {
+    font-size: 25px;
+  }
+}

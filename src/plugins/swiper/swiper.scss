@@ -1,0 +1,51 @@
+.veda-swiper,
+.veda-swiper-thumbnails {
+  position: relative;
+  .swiper-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 30px;
+  }
+  .swiper-button-prev {
+    left: -40px;
+    color: var(--color-gray9, #000);
+    background: none !important;
+  }
+  .swiper-button-next {
+    right: -40px;
+    color: var(--color-gray9, #000);
+    background: none !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after {
+      font-size: 34px;
+    }
+  }
+  .swiper-pagination-bullet {
+    background: currentColor !important;
+    cursor: pointer;
+  }
+}
+
+.veda-swiper-thumbnails {
+  .swiper-button-prev,
+  .swiper-button-next {
+    &:after {
+      font-size: 20px;
+    }
+  }
+  .swiper-slide-active {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-gray9, #000);
+      opacity: 0.3;
+    }
+  }
+}

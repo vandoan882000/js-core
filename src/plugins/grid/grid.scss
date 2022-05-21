@@ -1,0 +1,9 @@
+.veda-grid-auto {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--veda-grid-auto-column-width, 240px), 1fr));
+}
+.veda-grid-auto__item--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}

@@ -1,0 +1,38 @@
+
+.veda-message-root {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 999999;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.veda-message {
+  background-color: var(--color-light, #fff);
+  box-shadow: 0 5px 10px rgba(var(--color-rgb-dark, 0, 0, 0), 0.08);
+  color: #18a1ff;
+  border: 1px solid var(--color-gray-3, #eee);
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  width: max-content;
+}
+
+.veda-message--success {
+  color: #52c41a;
+}
+
+.veda-message--warning {
+  color: #faad14;
+}
+
+.veda-message--error {
+  color: #ff4d4f;
+}
+
+.veda-message__icon {
+  margin-right: 4px;
+}

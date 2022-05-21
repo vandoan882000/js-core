@@ -1,0 +1,19 @@
+.veda-compare__btn-close {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+.veda-compare__btn-close:hover {
+  background-color: black;
+  color: white;
+}
+.veda-compare__btn-close:hover i {
+  color: white;
+}

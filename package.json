@@ -1,0 +1,80 @@
+{
+  "name": "veda-core",
+  "version": "0.0.1",
+  "description": "Veda Core",
+  "scripts": {
+    "build": "npm run clean && webpack --config ./webpack.config.js --mode production --progress",
+    "dev": "npm run clean && webpack --config ./webpack.config.js --mode development",
+    "dev:watch": "npm run clean && webpack --config ./webpack.config.js --mode development --watch",
+    "start": "webpack serve --config ./webpack.config.js --mode development --host localhost",
+    "clean": "rimraf ./dist",
+    "tsc": "tsc",
+    "eslint": "eslint '*/**/*.{ts,tsx}' --quiet --fix"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn eslint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "alias": {
+    "preact": "./node_modules/preact/dist/preact.min.js"
+  },
+  "dependencies": {
+    "htm": "^3.1.0",
+    "preact": "^10.4.8"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "css-in-js-utils": "^3.1.0",
+    "css-loader": "^5.1.2",
+    "css-to-object": "^1.1.0",
+    "csstype": "^3.0.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-preact": "^0.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-sonarjs": "^0.6.0",
+    "file-loader": "^6.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "8.1.7",
+    "mini-css-extract-plugin": "^2.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.26.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
